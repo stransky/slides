@@ -1,0 +1,17 @@
+{
+  "name": "Web GL demo for Firefox OS",
+  "package_path" : "http://www.anakreon.cz/FirefoxOS/WebGLDemo.zip",
+  "version": "1",
+  "developer": {
+      "name": "Martin Stransky",
+      "url": "http://www.anakreon.cz"
+  },
+  "launch_path": "/index.html",
+  "description": "WebGL Renderer",
+  "fullscreen": "true",
+  "icons": {
+    "128": "/icon/128.png"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en"
+}

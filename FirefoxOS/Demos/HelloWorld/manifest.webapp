@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "name": "HelloWorld",
+  "launch_path": "/index.html",
+  "description": "Test application",
+  "icons": {
+    "128": "/icon/128.gif"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en"
+}

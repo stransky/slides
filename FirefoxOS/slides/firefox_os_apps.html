@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Shower Presentation Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:40px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#fff;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Firefox OS App development</h1>
+		<p>Martin Stransky <a href="mailto:stransky@redhat.com">&lt;stransky@redhat.com&gt;</a></p>
+	</header>
+
+<!-- 
+	
+	Simply copy the whole block for each slide you want.
+	Special slides get extra classes. Each slide needs an ID 
+	to allow for bookmarking and target jumping.
+	
+	Images, videos and SVG objects are automatically centred.
+
+	If you add a "cover" class images are taking over the whole 
+	screen resized to height. Add a "w" class to resize to width.
+
+ -->
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2>Firefox OS App development</h2>
+			</header>
+			<img src="pictures/cover.jpg" alt="">
+			<footer class="byline">Martin Stránský &lt;stransky@redhat.com&gt;</footer>
+		</section>
+	</div></div>
+
+	<div class="slide" id="What?"><div>
+		<section>
+			<header>
+				<h2>Session target</h2>
+			</header>			
+        <ul>
+        <li>Learn about Firefox OS
+        <li>Create your own Firefox OS application
+        <li>...and...
+        </ul>
+		</section>
+	</div></div>
+
+  <div class="slide" id="Why?"><div>
+		<section>
+			<header>
+				<h2>Why Firefox OS?</h2>
+			</header>			
+        <ul>
+        <li>It's new - you can be the first one
+        <li>It's fast - do it today
+        <li>It's easy - HTML+JS
+        <li>It's free - don't need to ask anyone to publish your app         
+		</section>
+	</div></div>
+
+	<div class="slide" id="Firefox OS vs. Android"><div>
+		<section>
+			<header>
+				<h2>Firefox OS vs. Android</h2>
+			</header>			
+        <ul>
+        <li>No hw back button - app provides it
+        <li>Applications can't quit
+        <li>Multitasking (gestures)
+        </ul>
+		</section>
+	</div></div>
+
+  <div class="slide" id="App types"><div>
+		<section>
+			<header>
+				<h2>App types</h2>
+			</header>			
+        <ul>
+          <li>Hosted apps vs. packaged apps</li>
+          <li>System APIs
+            <ul>
+              <li>Hosted</li>
+              <li>Privileged - approved on Martetplace</li>
+              <li>Certified - native ones</li>
+            </ul>
+          <li><a href="http://www.zdrojak.cz/clanky/zkusenosti-s-psanim-firefox-os-aplikaci">
+          http://www.zdrojak.cz/clanky/zkusenosti-s-psanim-firefox-os-aplikaci/</a></li>
+        </ul>        
+		</section>
+	</div></div>
+
+  <div class="slide" id="HowTo"><div>
+		<section>
+			<header>
+				<h2>Developer's How-To</h2>
+			</header>			
+        <ul>
+          <li>Firefox 33</li>
+            <ul>
+              <li>Responsible mode, debugger
+              <li>Application manager
+              <li>Firefox OS simulator (1.2)
+              <li>ADB and real device
+            </ul>
+          <li>webapp.manifest + html page</li>
+            <ul>
+              <li>My first app
+            </ul>
+        </ul>        
+		</section>
+	</div></div>
+  
+  <div class="slide" id="Install"><div>
+		<section>
+			<header>
+				<h2>How to deliver it?</h2>
+			</header>			
+        <ul>
+          <li>Self published apps (hosted, packaged)
+            <ul>
+              <li>Hosted <a href="http://davidwalsh.name/firefox-app">http://davidwalsh.name/firefox-app</a>
+              <li>Packaged <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options">https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options</a>
+              <li><a href="http://anakreon.cz/FirefoxOS/">http://anakreon.cz/FirefoxOS/</a>
+            </ul>          
+          <li>Firefox Marketplace
+            <ul>
+              <li><a href="http://www.zdrojak.cz/clanky/zkusenosti-s-psanim-firefox-os-aplikaci">
+              http://www.zdrojak.cz/clanky/zkusenosti-s-psanim-firefox-os-aplikaci/</a></li>
+            </ul>          
+        </ul>        
+		</section>
+	</div></div>
+  
+  <div class="slide" id="App templates"><div>
+		<section>
+			<header>
+				<h2>Application templates</h2>
+			</header>
+        <ul>
+        <li><a href="http://jaxo.github.io/fxosstub/docs/index.html">Jaxo application templates</a>
+        <li><a href="http://tosbourn.com/2013/01/firefox-os/using-mozillas-mortar-and-app-stub-for-bootstrapping-firefox-os-apps/">Mortar - app stub templates</a>
+        <li><a href="https://appmaker.mozillalabs.com/">https://appmaker.mozillalabs.com/</a>
+        
+        </ul>
+		</section>
+	</div></div>
+
+  <div class="slide" id="How to design?"><div>
+		<section>
+			<header>
+				<h2>How to design and develop?</h2>
+			</header>
+        <ul>
+        <li><a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS">Overview - First app, Web API...</a>
+        <li><a href="http://buildingfirefoxos.com/">http://buildingfirefoxos.com</a>
+        <li><a href="https://developer.mozilla.org/en-US/Apps/app_layout/responsive_design_building_blocks">Responsible design (variable screen resolutions)</a>
+        <li><a href="https://developer.mozilla.org/en-US/Apps">MDN - Mozilla Developer Network</a>
+        <li><a href="https://wiki.mozilla.org/Gaia/Shared">https://wiki.mozilla.org/Gaia/Shared</a> - "system" libraries for gestures, media access and so on.
+        <li><a href="http://www.unrealengine.com/html5">http://www.unrealengine.com/html5</a>
+        </ul>
+		</section>
+	</div></div>
+  
+  <div class="slide" id="Web Apps"><div>
+		<section>
+			<header>
+				<h2>Convert from C/C++</h2>
+			</header>
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Asm.js">asm.js</a> - hi-speed JS subset, generated by tools
+        <li><a href="http://kripken.github.io/emscripten-site/">Emscripten</a> - convert C/C++ (LLVM) to JS (asm.js)
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="ThankYou"><div>
+		<section>
+			<header>
+				<h2>Questions?</h2>
+			</header>
+      <center><img src="pictures/panda_packa.jpg" alt=""></center>
+      Ask me at &lt;stransky@redhat.com&gt;<br>
+			<p>Slides &amp; demo: <a href="https://github.com/stransky">https://github.com/stransky</a></p>
+		</section>
+	</div></div>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->	
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
