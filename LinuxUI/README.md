@@ -1,0 +1,1 @@
+Slides for lecture at VUT FIT for Linux GUI course
