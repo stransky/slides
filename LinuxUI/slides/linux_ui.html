@@ -259,39 +259,107 @@
         <li>Special applications (panel, dock...)
         <li>XToolkit
         <li>Motif (Win3.1 like), OpenLook, CDE (Sun)
-        <li>Gtk, Qt
+        <li>Gtk+, Qt
         </ul>
 		</section>
 	</div></div>
 
-	<div class="slide" id="Abstract"><div>
+	<div class="slide" id="GTK-2"><div>
 		<section>
 			<header>
-				<h2>Abstract</h2>
+				<h2>Gtk+ toolkit</h2>
 			</header>			
         <ul>
-        <li>Low level GFX (kernel)
-        <li>X Window (WinAPI), Wayland
-        <li>Toolkit layer (Gtk)
-        <li>Web applications (Firefox/FirefoxOS)        
+        <li>Side project of Gimp (Motif)
+        <li>Firefox, Evolution, OpenOffice
+        <li>Basic part of Gnome
+        <ul>
+          <li>Gnome-shell (Fedora), Unity (Ubuntu), MATE (Mint)
+          <li>Cinamon, Xfce...
+        </ul>
         </ul>
 		</section>
 	</div></div>
 
-	<div class="slide" id="Abstract"><div>
+	<div class="slide" id="GTK-3"><div>
 		<section>
 			<header>
-				<h2>Abstract</h2>
+				<h2>Gtk+ features</h2>
 			</header>			
         <ul>
-        <li>Low level GFX (kernel)
-        <li>X Window (WinAPI), Wayland
-        <li>Toolkit layer (Gtk)
-        <li>Web applications (Firefox/FirefoxOS)        
+        <li>C only (GObject, meta class)
+        <ul>
+          <li>binding (Python, Shell...)
+        </ul>
+        <li>Independend on XWindow (portable)
+        <ul>
+          <li>cairo (gfx), Pango (fonty)
+        </ul>        
+        <li>Various UI elements (gtk3-widget-factory)
+        <li>Debuging (GTK_DEBUG, <a href="https://wiki.gnome.org/Projects/GTK%2B/Inspector" target="_blank">GtkInspector</a>)
+        <li>Accessibility support
+        <li>UTF-8, Printing, Tablets, l10n, remote file systems (gio), IPC (DBus)
         </ul>
 		</section>
 	</div></div>
 
+	<div class="slide" id="GTK-4"><div>
+		<section>
+			<header>
+				<h2>Gtk+ versions</h2>
+			</header>			
+        <ul>
+        <li>Gtk1 - Dead
+        <li>Gtk2 - Zombie
+        <li>Gtk3 - Teenager (3.18)
+        <ul>
+          <li>90% API compatibility with Gtk2
+          <li>Backend independent (X11, Broadway (demo), Wayland...)
+          <li>Draw widgets with <a href="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-render-background" target="_blank">Cairo</a>
+          <li>CSS themes (gtk.css, gnome-tweak-tool)
+          <li>Gnome-(s)hell
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="GTK-5"><div>
+		<section>
+			<header>
+				<h2>Gtk+ Hierarchy</h2>
+			</header>			
+        <ul>
+        <li>C implementation of OOP <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" target="_blank">(GObject vs. GObjectClass)</a>
+        <li>GtkWidget as a base "class"
+        <ul>
+          <li><a href="https://developer.gnome.org/gtk3/stable/GtkWindow.html#GtkWindow.object-hierarchy" target="_blank">Object hierarchy</a>
+          <li>Type change - GTK_WINDOW(), GTK_CONTAINER()...
+        </ul>
+        <br>
+   			<pre>
+        <code>GtkWindow *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);</code>        
+        <code>GtkContainer *cont = GTK_CONTAINER(window);</code>
+        <code>gtk_container_add(cont, ....);</code>
+        </pre>        
+		</section>
+	</div></div>
+
+	<div class="slide" id="GTK-6"><div>
+		<section>
+			<header>
+				<h2>Gtk+ Widgets</h2>
+			</header>			
+        <ul>
+        <li>GtkWindow - root of all widgets
+        <li>GtkContainer - holds widgets
+        <li>GtkBox/GtkGrid - does the layout
+        <ul>
+          <li>box packaging properties
+          <li>dynamic child widget size allocation
+          <li>resize events
+        </ul>
+        </ul>
+		</section>
+	</div></div>
 
   <div class="slide" id="Native_apps"><div>
 		<section>
