@@ -372,9 +372,25 @@
         <li>Signal <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget.signals" target="_blank">handlers</a> attached to widgets
         <ul>
           <li>keyboard/mouse input, draw (expose)...
+          <li>timer
+          <li>usually registered only on main window (toplevel)
         </ul>
-        <li>pack (demo)
-        <li>glade (example)
+        <li>gtk_main() / gtk_main_iteration() event pump
+        <li>signal demo
+        </ul>
+		</section>
+	</div></div>
+  
+	<div class="slide" id="GTK-8"><div>
+		<section>
+			<header>
+				<h2>Gtk+ in Firefox</h2>
+			</header>			
+        <ul>
+        <li>Raw widget rendering, why? (also inside HTML pages)
+        <li>GtkStyle composition
+        <li>Custom event handling / event pump
+        <li>Custom widget hierrachy (MozContainer)
         </ul>
 		</section>
 	</div></div>
