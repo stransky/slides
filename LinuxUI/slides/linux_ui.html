@@ -99,7 +99,198 @@
 		</section>
 	</div></div>
 
+	<div class="slide" id="X11-0"><div>
+		<section>
+			<header>
+				<h2>XWindow - Introduction</h2>
+			</header>			
+        <ul>
+        <li>Created 1984 as a standard interface
+        <li>XFree86, X.Org implementations
+        <li>Client-server architecture, network transparent
+        <li>Uses DRI/HW for rendering
+        <li>XProtocol (Xlib), TCP/IP, SHM...
+        <ul>
+          <li>Route X via ssh (demo)
+        </ul>
+        <li><a href="https://cs.wikipedia.org/wiki/X_Window_System" target="_blank">https://cs.wikipedia.org/wiki/X_Window_System</a>
+        </ul>
+		</section>
+	</div></div>
 
+
+	<div class="slide" id="X11-1"><div>
+		<section>
+			<header>
+				<h2>XWindow - concepts</h2>
+			</header>			
+        <ul>
+        <li>Application is represented by window(s)
+        <li>Windows receives Xevents (drawing, input, focus)
+        <li>XServer (local), XClient (app), Diplay (conection), XScreen
+        <li>Does basic drawing to app window (primitives, text (fonts))
+        <li>WindowManagers (WM) manages more apps on one screen
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="X11-2"><div>
+		<section>
+			<header>
+				<h2>XWindow - WindowManager</h2>
+			</header>			
+        <ul>
+        <li>Allows more applications to share one XScreen
+        <li>Part of X protocol/extensions
+        <li>Manages application window (draw area)
+        <li>Draws decorations
+        <li>Position, visibility (stacking/tiling/compositors)
+        <li>Focus (active app), mouse/keyboard
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="X11-3"><div>
+		<section>
+			<header>
+				<h2>XWindow - Pros&Cons</h2>
+			</header>
+        <ul>
+        <li>Pros
+        <ul>
+        <li>Unix GUI standard, backward compatible
+        <li>Widely adopted, lots of apps
+        <li>Network transparent (TCP)
+        </ul>
+        <li>Cons
+        <ul>
+        <li>Insecure - run as root (direct HW access) 
+        <li>Hard paralelization (XProtocol is blocking, XInitThreads() global lock, bugs)
+        <li>Slow - blocking, states, bugs in X drivers
+        </ul>
+		</section>
+	</div></div>
+
+
+	<div class="slide" id="X11-4"><div>
+		<section>
+			<header>
+				<h2>XWindow - Interesting features & tools</h2>
+			</header>			
+        <ul>
+        <li>Xvfb - offscreen X server <a href="https://en.wikipedia.org/wiki/Xvfb" target="_blank">https://en.wikipedia.org/wiki/Xvfb</a>
+        <ul>
+          <li>ideal for GUI application testing (Firefox mochitests)
+        </ul>
+        <li>Xnest - nested X server (in window) <a href="https://en.wikipedia.org/wiki/Xnest" target="_blank">https://en.wikipedia.org/wiki/Xnest</a>
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="X11-5"><div>
+		<section>
+			<header>
+				<h2>XWindow - Interesting tools</h2>
+			</header>			
+        <ul>                
+        <li>glxgears
+        <li>xprop
+        <li>xwininfo
+        <li>Xnee - user action record/playback
+        <li>Zenity - X dialogs from command line
+        <ul>
+          <li>zenity --question --text "format C:\ ?"
+        </ul>
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="X11-6"><div>
+		<section>
+			<header>
+				<h2>XWindow - hello world</h2>
+			</header>			
+        <ul>
+        <li>XOpenDisplay() - connect client to X server
+        <li>XCreateSimpleWindow()
+        <li>XSelectInput() - events received by the window
+        <li>XFillRectangle()/XDrawString()
+        <li>XNextEvent() - get events from X server
+        <ul>
+          <li>expose, key events,...
+        </ul>
+        <li><a href="http://rosettacode.org/wiki/Window_creation/X11#Xlib" target="_blank">http://rosettacode.org/wiki/Window_creation/X11#Xlib</a>
+        </ul>
+		</section>
+	</div></div>
+
+  <div class="slide" id="W-1"><div>	
+		<section>
+			<header>
+				<h2>Wayland - not the city</h2>
+			</header>			
+        <ul>
+        <li>The same concepts as XWindow
+        <ul>
+          <li>Client(application), Server(screen)
+          <li>Display (connection), Window(application)
+        </ul>
+        <li>Client/Server connect is not network transparent (SHM)
+        <ul>
+        <li>libwayland-client/libwayland-server
+        </ul>
+        <li>No drawing API, DRI only (cairo, azure, Gtk)
+        <li>Stateless
+        <li>Secure (app isolation)
+        <li>Can host XWindow server (XWayland)
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="GTK-1"><div>
+		<section>
+			<header>
+				<h2>Toolkits</h2>
+			</header>			
+        <ul>
+        <li>Simplify X11 API, but the same concepts
+        <li>Widgets (prefabricated windows)
+        <li>Themes (decorations)
+        <li>Special applications (panel, dock...)
+        <li>XToolkit
+        <li>Motif (Win3.1 like), OpenLook, CDE (Sun)
+        <li>Gtk, Qt
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="Abstract"><div>
+		<section>
+			<header>
+				<h2>Abstract</h2>
+			</header>			
+        <ul>
+        <li>Low level GFX (kernel)
+        <li>X Window (WinAPI), Wayland
+        <li>Toolkit layer (Gtk)
+        <li>Web applications (Firefox/FirefoxOS)        
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="Abstract"><div>
+		<section>
+			<header>
+				<h2>Abstract</h2>
+			</header>			
+        <ul>
+        <li>Low level GFX (kernel)
+        <li>X Window (WinAPI), Wayland
+        <li>Toolkit layer (Gtk)
+        <li>Web applications (Firefox/FirefoxOS)        
+        </ul>
+		</section>
+	</div></div>
 
 
   <div class="slide" id="Native_apps"><div>
