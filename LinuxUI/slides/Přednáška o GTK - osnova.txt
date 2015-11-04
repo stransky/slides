@@ -1,0 +1,178 @@
+﻿Osnova přednášky o GTK
+  
+
+obrázek k lepší identifikaci dokumentu v náhledu zvenku
+
+
+
+
+
+
+
+úvod - 10min
+* zaujmout - co se dozví a k čemu to je a k čemu to bude jim
+* představení tématu
+* příklad/y užití
+
+
+
+Low level vrstva - DRI/GL (kernel) - 10min
+DRI/GL (kernel)
+* aplikace dostane kus pameti (screen, buffer) kam si muze kreslit co chce - primy pristup na HW
+   * Fullscreen aplikace (hry)
+   * OpenGL - 3D grafika
+   * XWindow - 2D
+   * Wayland
+* kms (kernel mode setting?)
+* ukazka kodu?
+
+
+
+
+________________
+
+
+
+Zaklani podpora aplikaci - X Window (WinAPI) - 20min
+Zakladni principy - UI - XServer, XWindow Manager
+* XServer (lokalni), Xklient (aplikace), spojeni (Display)
+* WindowManager (co dela, proc)
+   * stacking/tiling/compositors
+   * Kompozitni (offscreen, blending, vice oken zaraz)
+   * Ovladani skrze X protokol
+   * focus/kayboard/mouse input
+* co je co (dekorace, okna), co kdo resi (aplikace/WM/X)
+
+
+X-Windows 10 ( Win API)
+* kresli “okna” na obrazovku, vybira aktivni aplikaci (focus), resi vstup z periferii (klavesnice/mys)
+* že to existuje, jak to funguje, je spousta problémů, je to rozbitý, pomalý
+* základní nástřel, jak vypadá volání funkcí
+* proč se od toho odchází
+* offscreen verze (xvfb)
+* Xlib vs. XToolkit
+* Rozdil od WinAPI
+   * Xloop
+* Zakladni pojmy - Display, Window, 
+* reseni zprav/smycka?
+* Kresleni
+   * core X11 protocol
+   * XRender extension
+   * DRI
+* Rozsireni (bastly) - DRI, SharedMemory, (X)randr…
+* ne-bezpecne (neni izolace aplikaci)
+* spojeni klient-server - (Display) - socket/SHM/TCP?
+   * pres xlib
+* uzitecne nastroje (xwinifo, xprops…)
+* ukazka kodu? (Hello world v Xlib)
+
+
+Wayland
+* Srejne pojmy jako X window (Display, Window)
+* Pouze prenasi offscreen buffer (pixmapa) na obrazovku (screen)
+* Zadne renderovaci api, pouze da k dispozici buffer, rendering si dela aplikace sama jak chce:
+   * cairo, azure
+* zhruba odpovida DRI rezimu v XWindow
+* Neni sitove transparentni (jede pres IPC/Kernel - socket)
+* Muze nad nim bezet Xserver (XWayland)
+* izolace aplikaci (bezpecne)
+
+Stredni vrstva - Toolkit (Gtk, Qt…)-30min
+* stejna koncepce jako XWindow, v podstate abstrakce X
+   * diplay/okno/visual/loop/callback
+* zjednodusene API oproti Xlib
+* Vlastni dekorace/vzhled, temata
+   * Motif (podle Win3.1), OpenLook, CDE (Sun)
+
+
+GTK toolkit
+* proč vzniklo a proč funguje
+   * GIMP toolkit, nahrada za Motif
+* příklady úspěšných GUI a aplikací
+   * Gimp, Firefox, Evolution...
+* rozdily proti ostatnim TK
+   * Pouze v C (meta-tridy, GObject)
+   * nepouziva Xt toolkit, nezavisle na XWindow
+      * cairo (gfx), Pango (fonty)
+   * Diky GObject snadny binding do dalsich jazyku (Python, C++,...)
+* Co umi
+   * Moderni UI prvky
+   * Podpora accessibility
+   * UTF-8, Tisk, podpora HW (Tablety), Lokalizace, remote souborove system (gio), IPC (DBus)
+* Dostupne verze
+   * Gtk1 - mrtvola
+   * Gtk2 - zombie
+      * API vazane na XWindow (kresleni)
+   * Gtk3 - adolescent (proc vzniknul?)
+      * 90% kompatibilni s Gtk2
+      * Nezavisle na okenim systemu (X, Wayland…)
+      * lisi se pouze low-level rendering (cairo)
+      * Temata vzhledu - CSS (gtk.css)
+      * Gnome-(s)hell
+* Myslenka GTK - Jak se tvori UI
+   * Objektovy princip - vice rozhrani v 1 objektu, hierarchie, typovani
+   * MainWindow - root
+   * Container - obsahuje dalsi widgety
+   * Box (V/H) - zalamovani/formarovani,margin/padding
+   * Responsible design
+   * Glade (interaktivni UI, generator C kodu)
+* Interakce
+   * main loop (nebo volani event handleru)
+   * signaly pripojene k objektum
+   * hierarchie
+* GLib (podpurna knihovna)
+* Gtk3 ve Firefoxu
+* Ukazka kodu/programu/demo
+
+
+
+Web Aplikace - 20 min
+* Stejne vyhody/nevyhody/omezeni jako web stranka
+* Vyhody
+   * Velka rychlost vyvoje, rychle prototypovani, dostupne nastroje (export z Java, GTW (google web tookit)).
+   * V principu multiplatformni (PC, mobily)
+   * Nemusi byt on-line - lokalni instalace z balicku
+      * ukazka
+   * dostupne toolkity (nodejs, jquery…)
+   * primy export z C/C++ (Emscripten, WebAssembly)
+      * ukazka?
+      * nejlepsi pro fullscreen aplikace, OpenGL, SDL...
+      * problem s knihovnami - mohou byt nedostupne
+* Nevyhody - stejne jako web stranka obecne
+   * horsi vazba na OS - bezpecnost (vychazi z designu webu)
+      * neni primy pristup na disk, periferie, clipboard, IPC, pouze Web technologie (local storage, cookies, XMLHttpRequest())
+      * data pomoci JSON, vlastni bin. format, rozsireni JS (bit array)
+      * neplati pro FirefoxOS
+   * Cisty JS je prasarna, dovoli vse, nestrukturovane, vse globalni, hruza
+   * Rychlost
+      * JS - cca. 50x pomalejsi nez C
+      * JS z Emscripten 10x pomalejsi nez C
+* na co se hodi
+   * GUI on-line aplikace (idealni)
+      * muze byt offline a pouze se pripojovat, nebo komplet on-line
+   * multiplatformni aplikace/mobily
+   * co nepotrebuje vysoky vykon
+   * Firefox OS - ukazka
+* Ukazka kodu
+   * Debugovani
+   * OOP, prototypy
+* Ukazka aplikaci
+   * unreal
+   * webberusky
+   * google docs
+
+
+
+Praxe - 5 min
+* Xlib/Xtoolkit/WinAPI - nepouziva se nikdy, zapomente
+   * pouze hacky/nepodporovane veci Gtk, diagnostika...
+* Gtk/Qt - pouzitelne, opruz delat UI (callback funkce, handlery…), vyhoda pro vetsi projekty kde GUI je jen mensi cast (Firefox, Gimp…)
+* Web - nejjednodusi, nejslabsi vykon, dostatecne pro vetsinu aplikaci, muze byt on-line, vhodne pro lehci on-line aplikace. Problem s vetsim kodem.
+        
+
+Zakončení 5 min
+* zopakování klíčových znalostí, myšlenek, pojmů
+   * jedna důležitá věc, co si odnášíte z přednášky
+   * největší objev
+   * co nechci zapomenout
+* doporučené zdroje
