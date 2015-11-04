@@ -1,0 +1,1 @@
+gcc -o signal -g -O0 signal.c `pkg-config --libs --cflags gtk+-3.0`

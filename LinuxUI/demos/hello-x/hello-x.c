@@ -1,5 +1,5 @@
 /* Source: http://rosettacode.org/wiki/Window_creation/X11
-   build: gcc hello-x.c -L/usr/X11R6/lib -lX11 -o hello-x 
+   build: gcc hello-x.c -L/usr/X11R6/lib -lX11 -o hello-x
 */
 
 #include <X11/Xlib.h>

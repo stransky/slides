@@ -1,0 +1,1 @@
+gcc -o pack -g -O0 pack.c `pkg-config --libs --cflags gtk+-2.0`
