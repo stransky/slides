@@ -1,0 +1,1 @@
+gcc -o hello -g -O0 hello.c `pkg-config --libs --cflags gtk+-2.0`

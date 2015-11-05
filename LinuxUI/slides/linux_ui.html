@@ -72,7 +72,7 @@
 				<h2>Abstract</h2>
 			</header>			
         <ul>
-        <li>Low level GFX (kernel)
+        <li><B>Low level GFX (kernel)</B>
         <li>X Window (WinAPI), Wayland
         <li>Toolkit layer (Gtk)
         <li>Web applications (Firefox/FirefoxOS)        
@@ -97,6 +97,20 @@
         <li>OpenGL (3D)
         <li>Wayland, XWindow (2D)
         <li><a href="https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure" target="_blank">https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure</a>
+        </ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="Abstract-2"><div>
+		<section>
+			<header>
+				<h2>Abstract</h2>
+			</header>			
+        <ul>
+        <li>Low level GFX (kernel)
+        <li><B>X Window (WinAPI), Wayland</B>
+        <li>Toolkit layer (Gtk)
+        <li>Web applications (Firefox/FirefoxOS)        
         </ul>
 		</section>
 	</div></div>
@@ -264,18 +278,31 @@
         </ul>
 		</section>
 	</div></div>
+  
+	<div class="slide" id="Abstract-3"><div>
+		<section>
+			<header>
+				<h2>Abstract</h2>
+			</header>
+        <ul>
+        <li>Low level GFX (kernel)
+        <li>X Window (WinAPI), Wayland
+        <li><B>Toolkit layer (Gtk)</B>
+        <li>Web applications (Firefox/FirefoxOS)
+        </ul>
+		</section>
+	</div></div>
 
 	<div class="slide" id="GTK-1"><div>
 		<section>
 			<header>
-				<h2>Toolkits</h2>
+				<h2>Toolkits (Gtk+, Qt,...)</h2>
 			</header>			
         <ul>
-        <li>Simplify X11 API, but the same concepts
+        <li>Runs above XWindow/Wayland        
         <li>Widgets (prefabricated windows)
         <li>Themes (decorations)
         <li>Special applications (panel, dock...)
-        <li>XToolkit
         <li>Motif (Win3.1 like), OpenLook, CDE (Sun)
         <li>Gtk+, Qt
         </ul>
@@ -309,10 +336,6 @@
         <ul>
           <li>binding (Python, Shell...)
         </ul>
-        <li>Independend on XWindow (portable)
-        <ul>
-          <li>cairo (gfx), Pango (fonty)
-        </ul>        
         <li>Various UI elements (gtk3-widget-factory)
         <li>Debuging (GTK_DEBUG, <a href="https://wiki.gnome.org/Projects/GTK%2B/Inspector" target="_blank">GtkInspector</a>)
         <li>Accessibility support
@@ -333,7 +356,7 @@
         <ul>
           <li>90% API compatibility with Gtk2
           <li>Backend independent (X11, Broadway <a href="https://developer.gnome.org/gtk3/stable/gtk-broadway.html" target="_blank">(demo)</a>, Wayland...)
-          <li>Draw widgets with <a href="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-render-background" target="_blank">Cairo</a>
+          <li>Custom widget draw with <a href="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-render-background" target="_blank">Cairo</a>
           <li>CSS themes (gtk.css, gnome-tweak-tool)
           <li>Gnome-(s)hell
         </ul>
@@ -377,6 +400,7 @@
         </ul>
         <li>pack (demo)
         <li>glade (example)
+        <li>gtk3-demo - code samples
         </ul>
 		</section>
 	</div></div>
@@ -409,6 +433,20 @@
         <li>GtkStyle composition
         <li>Custom event handling / event pump
         <li>Custom widget hierrachy (MozContainer)
+        </ul>
+		</section>
+	</div></div>
+  
+	<div class="slide" id="Abstract-4"><div>
+		<section>
+			<header>
+				<h2>Abstract</h2>
+			</header>
+        <ul>
+        <li>Low level GFX (kernel)
+        <li>X Window (WinAPI), Wayland
+        <li>Toolkit layer (Gtk)
+        <li><B>Web applications (Firefox/FirefoxOS)</B>
         </ul>
 		</section>
 	</div></div>

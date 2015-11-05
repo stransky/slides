@@ -1,6 +1,7 @@
 // build by gcc -o test2 -g -O0 test2.c `pkg-config --libs --cflags gtk+-3.0`
 
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 GtkWidget *window;
 GtkWidget *drawing;
@@ -16,6 +17,13 @@ static void draw_tooltip_cb(GtkWidget *widget, cairo_t* cr,
     cairo_rectangle (cr3, 0, 0, 70, 70);
     cairo_set_source_rgb (cr3, 0, 0, 1);
     cairo_fill (cr3);
+}
+
+gboolean
+on_key_press (GtkWidget *widget, GdkEventKey *event, gpointer user_data)
+{
+  printf("key pressed \n");
+  return FALSE;
 }
 
 /* Another callback */
@@ -40,6 +48,9 @@ int main( int   argc,
 
     g_signal_connect (drawing, "draw",
           G_CALLBACK (draw_tooltip_cb), NULL);
+
+    g_signal_connect (window, "key_press_event",
+          G_CALLBACK (on_key_press), NULL);
 
     gtk_widget_show_all (GTK_WIDGET(window));
 
