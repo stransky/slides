@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Shower Presentation Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		.slide {
+			font-size:30px;
+			}
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:40px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#fff;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>RedHat OpenHouse - Firefox presentation</h1>
+		<p>Martin Stransky <a href="mailto:stransky@redhat.com">&lt;stransky@redhat.com&gt;</a></p>
+	</header>
+
+<!-- 
+	
+	Simply copy the whole block for each slide you want.
+	Special slides get extra classes. Each slide needs an ID 
+	to allow for bookmarking and target jumping.
+	
+	Images, videos and SVG objects are automatically centred.
+
+	If you add a "cover" class images are taking over the whole 
+	screen resized to height. Add a "w" class to resize to width.
+
+ -->
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2>RedHat Open House - Firefox</h2>
+			</header>
+			<img src="pictures/cover.jpg" alt="">
+			<footer class="byline">Martin Stránský &lt;stransky@redhat.com&gt;</footer>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide0"><div>
+		<section>
+			<header>
+				<h2>Recent Firefox state</h2>
+			</header>
+        Firefox version ... ?<BR>
+        Competes Chrome/Edge<BR>
+        Rust - for some components<BR>
+        Multiprocess Firefox (e10s)<BR>
+        Sandboxes<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide1"><div>
+		<section>
+			<header>
+				<h2>Mozilla catch plan</h2>
+			</header>
+        Massive e10s usage<BR>
+        Rust - Oxidation<BR>
+        Sandboxes<BR>
+        WebExtensions<BR>
+        New look - Photon<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide2"><div>
+		<section>
+			<header>
+				<h2>Firefox Nightly - get the beast</h2>
+			</header>
+        <img src="pictures/mozchomp.gif" alt=""><BR>
+        Latest and greatest!<BR>
+        Rust components (mp4, url-parser)<BR>
+        Full Firefox Multiprocess (2+1)<BR>
+        Sandboxes (L2, plugins)<BR>
+        Available by Flatpak!<br>
+        ...e10s, memory usage... <br>
+		</section>
+	</div></div>
+
+
+  <div class="slide" id="slide3"><div>
+		<section>
+			<header>
+				<h2>Red Hat/Linux focus - Flatpak</h2>
+			</header>
+        <BR>
+        ...Ikea Firefox...?<BR>
+        ...Ubuntu Snaps...?<br>
+        <a href="https://firefox-flatpak.mojefedora.cz/">firefox-flatpak.mojefedora.cz</a><br>
+        <br>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide4"><div>
+		<section>
+      <center>
+      <img src="pictures/rust.png" width=500 alt="Rust logo">
+      </center>
+		</section>
+	</div></div>
+
+  <div class="slide cover" id="slide5"><div>
+		<section>
+      <img src="pictures/rust-speed.png" alt="Rust parser speed up">
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide7"><div>
+		<section>
+			<header>
+				<h2>Default Firefox Sandbox</h2>
+			</header>
+      Pwn2Own - $1.000.000<BR>
+      Seccomp (kernel) on Linux<BR>
+      <center>
+      <img src="pictures/550px-Sandboxing_basic_architecture.png" alt="sandbox">
+      </center>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide8"><div>
+		<section>
+			<header>
+				<h2>Extra (Firefox) Sandbox</h2>
+			</header>      
+      <a href="https://firejail.wordpress.com/">Firejail</a>, SELinux, Flatpak sandbox...<BR>
+      <center>
+      <img src="pictures/550px-Sandboxing_extra_architecture.png" alt="sandbox">
+      </center>
+      ....<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide9"><div>
+		<section>
+			<header>
+				<h2>X11 vs. Wayland</h2>
+			</header>      
+      Lower GFX component<BR>
+      Faster (no drawing)<BR>
+      Secure (no access to other windows, root window, screen...)<BR>            
+      ...<BR>
+      much more! <BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide10"><div>
+		<section>
+			<header>
+				<h2>Web/JS Applications</h2>
+			</header>
+      Firefox OS<BR>
+      Web applications<br>
+      <a href="http://beta.unity3d.com/jonas/AngryBots/">Emscripten</a><br>
+      <a href="http://webassembly.org/docs/text-format/">WebAssembly</a><br>
+		</section>
+	</div></div>
+
+	<div class="slide" id="ThankYou"><div>
+		<section>
+			<header>
+				<h2>Questions?</h2>
+			</header>
+      <center><img src="pictures/panda_packa.jpg" alt=""></center>
+		</section>
+	</div></div>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->	
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>

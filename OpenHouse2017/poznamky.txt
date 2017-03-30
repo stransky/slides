@@ -1,0 +1,62 @@
+-------------------------------------------------
+- Desktop tym, co delame v Red Hatu/Linuxu
+- proc pouzivat Firefox?
+
+--
+Mozilla catch plan
+- snazi se ziskat uzivatele - projekt quantum
+
+--
+Firefox Nightly - get the beast
+- demo -> ruzne profily, vice FF zaraz
+- demo -> nightly, procesy, gnome-system-monitor
+
+--
+Red Hat/Linux focus - Flatpak
+- demo flatpack - ukazat honzovu stranku
+- instalace mimo rpm
+
+--
+Rust
+- paralelizmus
+- bezpecna prace s pameni (ne null/volne pointery)
+- povinna inicializace
+- ne GC
+
+--
+Servo
+- Porovnani rychlosti
+- Demo servo
+
+--
+Sandboxy
+- retezeni bugu -> FF bug, OS bug
+- spusteni aplikace na cilovem OS
+- soutez
+- pokousi se prolomit behem hodiny
+- bezpecnostni zaplaty FF do jednoho dne
+- black market, trh s exploity
+
+--
+Extra sandboxy
+- linux
+- demo - flatpak
+
+--
+X11 vs. Wayland
+- nakreslit GXF stack na flipchart, Wayland/X11/Gtk3
+- dulezite pro sandbox (X11 nejde izolovat)
+- demo wayland
+
+---
+Web/JS Applications
+- vyhody - univerzalnost, rychlost vyvoje
+- nevyhody - muze byt pomalejsi, otevreny kod
+- demo firefox OS
+- FF JS debugger/web aplikace
+  - vyhody rychlost ladeni
+  - demo - berusky - debugger
+- Emscripten - C++ -> JS
+- WebAssembly - binarni (kompilovany) format, neni to JS
+
+---------------------------------------------

@@ -1,0 +1,3 @@
+cd /home/komat/Prednasky/OpenHouse2017/servo
+./mach run -r --browserhtml
+#./mach run http://google.com
