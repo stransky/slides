@@ -1,0 +1,1 @@
+sandbox -X -t sandbox_web_t firefox -P t2 -no-remote

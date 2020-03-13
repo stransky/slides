@@ -1,0 +1,2 @@
+cd /home/komat/tmp676-trunk-gtk3/gecko-dev/objdir/dist/bin
+GDK_BACKEND=wayland ./firefox -P omtc -no-remote

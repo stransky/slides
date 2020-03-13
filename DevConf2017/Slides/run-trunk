@@ -1,0 +1,2 @@
+cd /home/komat/tmp676-trunk-gtk3/src/obj-x86_64-pc-linux-gnu/dist/bin
+./firefox -P t1 -no-remote
