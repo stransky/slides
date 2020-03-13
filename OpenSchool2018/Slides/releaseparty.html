@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Shower Presentation Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		.slide {
+			font-size:30px;
+			}
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:40px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#fff;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<p>Web a Mozilla Firefox</a></p>
+	</header>
+
+<!--
+
+	Simply copy the whole block for each slide you want.
+	Special slides get extra classes. Each slide needs an ID
+	to allow for bookmarking and target jumping.
+
+	Images, videos and SVG objects are automatically centred.
+
+	If you add a "cover" class images are taking over the whole
+	screen resized to height. Add a "w" class to resize to width.
+				<h2>Fedora 26 Release Party - Firefox</h2>
+			<img src="pictures/cover.jpg" alt="">
+
+ -->
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+			</header>
+			<img src="pictures/firefox-nightly_512x512.png" alt="">
+			<footer class="byline">Web a Mozilla Firefox</footer>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide0"><div>
+		<section>
+			<header>
+				<h2>Web (standarty)</h2>
+			</header>
+        Google Chrome<BR>
+        Mozilla Firefox<BR>
+        Microsoft Edge<BR>
+        Safari MacOS/Apple<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide1"><div>
+		<section>
+			<header>
+				<h2>Web - legální zajmy</h2>
+			</header>
+      Uživatelé (soukromí, služby)<BR>
+      Google - AdSense, Youtube, vyhledávání<BR>
+      Mozilla - "free" web (jako Linux/RHEL)<BR>
+      Microsoft - ekosystém (lock-in)<BR>
+      Apple - ekosystém (lock-in)<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide2"><div>
+		<section>
+			<header>
+				<h2>Web - (ne)legální zajmy</h2>
+			</header>
+      Prodej reklamy, služeb (kr. karty / USA)<BR>
+      <BR>
+      Státní zájmy (bezpečnost, sledování, Hacking Team..)<BR>
+      <BR>
+      Kriminalita (těžba měn, ransomware, karty, účty)<BR>
+      Rizikové weby vs. hacking<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide3"><div>
+		<section>
+			<header>
+				<h2>(Ne)bezpečnost prohlížeců</h2>
+			</header>
+        Anonymita, integrita, identita (účty)<BR>
+        Historie prohlížení (soukromí/reklama, ISP/Google, cookies)<BR>
+        <a href="https://amiunique.org">Browser fingerprint</a><BR>
+	      <a href="https://play.google.com/store/apps/details?id=org.mozilla.focus">Firefox Focus (Android)</a><BR>
+        Integrita - cílené útoky (CIA, PCR, Hacking team...)<BR>
+        <a href="https://www.thezdi.com/blog/2018/1/25/pwn2own-returns-for-2018-partners-with-microsoft-and-sponsored-by-vmware#browsers">Pwn2Own 2018 - $2.000.000</a><BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide10"><div>
+		<section>
+			<header>
+				<h2>Web - Technologie</h2>
+			</header>
+        Multiprocess (e10s)<BR>
+        Sandboxy<BR>
+        Private (soukromý) režim<BR>
+        Doplňky (AddBlock, NoScript....)<BR>
+        Ne Flash plug-in<BR>
+        <BR>
+        Google Chrome - integrita<BR>
+        Mozilla Firefox - anonymita, integrita<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide11"><div>
+		<section>
+			<header>
+				<h2>Firefox/Firefox Nightly</h2>
+			</header>
+        <a href="www.mozilla.com">www.mozilla.com</a><BR>
+        <BR>
+        Noční příšera!<BR>
+        <a href="https://twitter.com/FirefoxNightly">https://twitter.com/FirefoxNightly</a><BR>
+        <img src="pictures/mozchomp.gif" alt=""><BR>
+        <BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide50"><div>
+		<section>
+			<header>
+				<h2>Fedora - Flatpak</h2>
+			</header>
+        <a href="https://firefox-flatpak.mojefedora.cz/">firefox-flatpak.mojefedora.cz</a><br>
+		</section>
+	</div></div>
+
+  <div class="slide" id="slide90"><div>
+		<section>
+			<header>
+				<h2>X11 vs. Wayland</h2>
+			</header>
+      Rychlejší (no drawing)<BR>
+      Bezpečnější (izolované okna, root window, screen...)<BR>
+      ...<BR>
+		</section>
+	</div></div>
+
+	<div class="slide" id="ThankYou"><div>
+		<section>
+			<header>
+				<h2>Questions?</h2>
+			</header>
+      <center><img src="pictures/panda_packa.jpg" alt=""></center>
+		</section>
+	</div></div>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>

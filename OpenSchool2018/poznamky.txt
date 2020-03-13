@@ -1,0 +1,48 @@
+-- Situace na webu - kdo je kdo?
+
+
+------------------------
+- proc pouzivat Firefox?
+    - zeptat se jich
+    - na strane uzivatelu
+- Chromium/Chrome
+
+--
+Aktualni stav:
+- Pouze Web Extensions
+- e10s
+
+--
+Soukromi:
+- historie (i ISP)
+- browser fingerprint
+    - pujcky (web)
+    - hodnoceni uzivatelu
+- private mode
+- Firefox focus
+- DND (do not track)
+- Tor
+
+--
+Nejvetsi problemy:
+- flash (proc?)
+- 
+
+--
+Bezpecnost/Sandboxy:
+- retezeni bugu -> FF bug, OS bug
+- spusteni aplikace na cilovem OS
+- soutez
+- pokousi se prolomit behem hodiny
+- bezpecnostni zaplaty FF do jednoho dne
+- black market, trh s exploity
+
+--
+- Flatpack
+- Flathub
+
+--
+Firefox Nightly - get the beast
+- demo -> ruzne profily, vice FF zaraz
+- demo -> nightly, procesy, gnome-system-monitor
+- demo -> spustit flatpak z prikazove radky + ProfileManager + no-remote

@@ -1,0 +1,8 @@
+3.5/slide
+
+- Pripojeni / certifikaty
+    - host www.ct24.cz
+    - SSL pro overeni (3-strane overeni)
+
+- Sledovani prime (google/fb...)
+    www.blesk.cz s/bez ochrany

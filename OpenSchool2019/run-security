@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+MOZ_ENABLE_WAYLAND=1 firefox -P security -no-remote

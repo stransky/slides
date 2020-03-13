@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Shower Presentation Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		.slide {
+			font-size:45px;
+			}
+		#Cover h2 {
+			color:#FFF;
+			text-align:center;
+			font-size:40px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#fff;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Firefox.next</h1>
+		<p>Martin Stransky <a href="mailto:stransky@redhat.com">&lt;stransky@redhat.com&gt;</a></p>
+	</header>
+
+<!-- 
+	
+	Simply copy the whole block for each slide you want.
+	Special slides get extra classes. Each slide needs an ID 
+	to allow for bookmarking and target jumping.
+	
+	Images, videos and SVG objects are automatically centred.
+
+	If you add a "cover" class images are taking over the whole 
+	screen resized to height. Add a "w" class to resize to width.
+
+ -->
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2>Firefox.next</h2>
+			</header>
+			<img src="pictures/cover.jpg" alt="">
+			<footer class="byline">Martin Stránský &lt;stransky@redhat.com&gt;</footer>
+		</section>
+	</div></div>
+
+	<div class="slide" id="What?"><div>
+		<section>
+			<header>
+				<h2>Fedora</h2>
+			</header>	
+				<br>		
+        Firefox on Gtk3<BR>
+        Wayland<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="Fails"><div>
+		<section>
+			<header>
+				<h2>Mozilla.failures</h2>
+			</header>			
+        Market share<BR>
+        Firefox OS<BR> 
+        Firefox for Android<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="Next"><div>
+		<section>
+			<header>
+				<h2>Mozilla.next</h2>
+			</header>			
+        <BR>
+        <center>
+        Great or Dead<BR>
+        </center>
+		</section>
+	</div></div>
+
+  <div class="slide" id="Next2"><div>
+		<section>
+			<header>
+				<h2>Mozilla.Great</h2>
+			</header>			
+        Multiprocess Firefox (e10s)<BR>
+        Add-ons<BR>
+        DevTools<BR>
+        Privacy<BR>
+        Profiles<BR>
+		</section>
+	</div></div>
+
+  <div class="slide" id="Next3"><div>
+		<section>
+			<header>
+				<h2>Mozilla.Dead</h2>
+			</header>			
+        Panorama Tab Groups<BR>
+        Full Themes<BR>
+        Pocket<BR>
+        Hello<BR>
+        XPCOM, XUL, binary Add-ons<BR>
+		</section>
+	</div></div>
+
+  <div id="devtools" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Mozilla.Great-for-developers</div>
+        </h2>
+      </header>
+				<BR>
+        Developer Tools<BR>
+        Firebug.next<BR>
+       </section>
+  </div></div>
+
+  <div id="great-users" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Mozilla.Great-for-users</div>
+        </h2>
+      </header>
+        Activity Stream
+				<br>
+        Multiprocess Firefox (e10s)
+        <br>
+        Private browsing
+        <br>
+        Firefox Account
+    </section>
+  </div></div>
+
+  <div id="activity-stream" class="slide cover"><div>
+    <section>
+      <img src="pictures/activity-stream-mock.png" alt="Activity Stream Mock">
+   </section>
+  </div></div>
+
+	<div class="slide" id="OMTC"><div>
+		<section>
+			<header>
+				<h2>Mozilla.Firefox.Multiprocess</h2>
+			</header>
+      <center><img src="pictures/e10s-overview.png" alt=""></center>
+		</section>
+	</div></div>
+
+  <div id="addons" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Mozilla.Add-ons</div>
+        </h2>
+      </header>
+        Update for e10s
+        <br>
+				Signing (AMO)
+				<br>
+				WebExtensions
+				<br>
+        XUL, XPCOM, binary extensions
+    </section>
+  </div></div>
+
+
+	<div class="slide" id="ThankYou"><div>
+		<section>
+			<header>
+				<h2>Questions?</h2>
+			</header>
+      <center><img src="pictures/panda_packa.jpg" alt=""></center>
+		</section>
+	</div></div>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->	
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>

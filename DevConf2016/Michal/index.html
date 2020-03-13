@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html>
+<!--
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!--
+  If you want no numbers on the slides add a "nonumbers" class
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Firefox (DevConf.cz 2016)</title>
+<!--
+  If you upload your slides to the web, ensure that you have
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Firefox (DevConf.cz 2016)</h1>
+    <p class="footer">
+      Michal Stanke <a href="mailto:mstanke@mozilla.cz">&lt;mstanke@mozilla.cz&gt;</a><br>
+      <a href="https://twitter.com/MozillaCZ">@MozillaCZ</a><br>
+      DevConf.cz 2016, Brno
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       Brief talk about Firefox state and recent project development , live demo of Gtk3, Wayland, e10s. Also ask about hot topics like addons changes and so.
+    </p>
+  </aside>
+
+  <div id="first" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Firefox</div>
+        </h2>
+      </header>
+      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Tom_Servo.JPG"
+           class="middle"
+           alt="Tom Servo">
+      <small class="credits">
+        <a href="https://en.wikipedia.org/wiki/Tom_Servo#/media/File:Tom_Servo.JPG">
+          Tom Servo - Wikipedia.org, CC BY-SA 2.0
+        </a>
+      </small>-->
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="firefox-failed" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Firefox recent fails</div>
+        </h2>
+      </header>
+      <ul>
+        <li>market share</li>
+        <br>
+        <li>Firefox OS</li>
+        <br>
+        <li>Firefox for Android</li>
+      </ul>
+      <footer class="notes">
+          - i když se Mozilla zkusila zaměřit na podíl na trhu, nevyšlo to
+          - Firefox OS byl neúspěch, na trh už nepůjdou nové telefony
+          - orientace na IoT
+          - Firefox pro Android v absolutních číslech (počet stažení, počet uživatelů, poměr stažení a následného používání) roste
+          - v procentech tržního podílu ale klesá, protože trh roste výrazně rychleji
+          - Firefox musí o svém úspěchu rozhodovat podle uživatelů, ne čísel
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="great-or-dead" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Great or Dead</div>
+        </h2>
+      </header>
+      <ul>
+        <li>new mantra</li>
+        <br>
+        <li>not everything is perfect</li>
+        <br>
+        <li><strong>Great:</strong> Add-ons, Developer Tools, Private browsing, Profiles, ...</li>
+        <br>
+        <li><strong>Dead:</strong> Panorama Tab Groups, Heavyweight Themes, Pocket, Hello, ...</li>
+      </ul>
+      <footer class="notes">
+          - jak funguje Great or Dead
+          - porovnání ceny vývoje a přínosu pro uživatele
+          - skupiny panelů odebrány ve Firefoxu 45 (buggy, performance issues, a lot of code >20 000 lines)
+          - plné vzhledy budou odebrány [bug 1222546, https://discourse.mozilla-community.org/t/planning-the-future-of-complete-themes/5306]
+          - needed for Servo and browser.html future, replacement not prepared yet, but should be ready in time of removal
+          - Pocket and Hello integration moved to distributed add-ons (Go Faster initiative)
+          - doplňky distribuované s Firefoxem umožňí nezávislý vývoj na samotném prohlížeči
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="devtools" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Great for developers</div>
+        </h2>
+      </header>
+      <ul>
+        <li>Developer Tools</li>
+        <br>
+        <li>Firebug.next</li>
+      </ul>
+      <footer class="notes">
+          - v každé verzi nějaké nové ladící nástroje
+          - nově hlavně pro animace a paměť JavaScriptu
+          - zaměření na hry
+          - Firebug 3 bude postavený NA nástrojích Firefoxu [https://getfirebug.com/wiki/index.php/Firebug.next]
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="great-users" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Great for users</div>
+        </h2>
+      </header>
+      <ul>
+        <li>Private browsing</li>
+        <br>
+        <li>Firefox Account</li>
+        <br>
+        <li>Activity Stream</li>
+      </ul>
+      <footer class="notes">
+          - Great or Dead
+          - anonymní prohlížení rozšířeno o ochranu proti sledování (Tracking protection)
+          = blokování sledovacích prvků na stránkách, aktuálně pouze v anonymním prohlížení, ale v nočních sestaveních lze zapnout i pro běžné prohlížení
+          - profily dostávají nové UI pro jejich správu
+          - účet Firefox Account aktuálně funguje pro Firefox Sync
+          - nově jej přidá server addons.mozilla.org (za několik týdnů)
+          - postupně nahradí Mozilla Persona (skončí v listopadu)
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="activity-stream" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Activity stream</div>
+        </h2>
+      </header>
+      <img src="pictures/activity-stream-mock.png" alt="Activity Stream Mock">
+      <footer class="notes">
+          - Activity Stream jako nadstavba historie ve Firefoxu [https://wiki.mozilla.org/Firefox/Activity_Stream, https://mozilla.invisionapp.com/share/GA5RW90CW#/screens]
+          - interaktivní
+          - spouštění videí přímo tam (embed)
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="servo" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>
+          <div>SERVO</div>
+        </h2>
+      </header>
+      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Tom_Servo.JPG"
+           class="middle"
+           alt="Tom Servo">
+      <small class="credits">
+        <a href="https://en.wikipedia.org/wiki/Tom_Servo#/media/File:Tom_Servo.JPG">
+          Tom Servo - Wikipedia.org, CC BY-SA 2.0
+        </a>
+      </small>-->
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="servo-info" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>SERVO</div>
+        </h2>
+      </header>
+      <ul>
+        <li>written is Rust</li>
+        <li>multi-threaded page rendering</li>
+        <li><strong>everyting</strong> in parallel</li>
+        <li>memory efficient</li>
+        <li>experimental project only</li>
+      </ul>
+      <footer class="notes">
+          - spíše postupně nahradí jednotlivé části Gecka [gekou] než jako samostatný "produkt"
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="servo-co-uz-umi" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>SERVO - What works</div>
+        </h2>
+      </header>
+      <ul>
+        <li>ACID2</li>
+        <li>Wikipedia</li>
+        <li>GitHub</li>
+        <li>Mozilla.cz</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="servo-ukazka" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>What do <strong>you</strong> want to see?</h2>
+      </header>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="servo-co-muzeme-cekat" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>SERVO - Future</div>
+        </h2>
+      </header>
+      <ul>
+        <li>2016
+            <ul>
+                <li>performance Servo/Gecko/Blink</li>
+                <li>simple browser (+ browser.html)</li>
+                <li>replace first Gecko component</li>
+            </ul>
+        </li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="dekujeme" class="slide"><div>
+    <section>
+      <header>
+        <h2>Thank you</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <ul class="nobull">
+        <li>Michal Stanke</li>
+        <li><a href="https://twitter.com/MozillaCZ">@MozillaCZ</a></li>
+      </ul>
+      <small class="credits">
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
+      </small>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+-------------------------------------------------
+- proc pouzivat Firefox?
+- Chromium/Chrome
+- snazi se ziskat uzivatele - projekt quantum
+
+--
+Firefox Nightly - get the beast
+- demo -> ruzne profily, vice FF zaraz
+- demo -> nightly, procesy, gnome-system-monitor
+- demo -> spustit flatpak z prikazove radky + ProfileManager + no-remote
+
+--
+- bezpecnost:
+- historie (i ISP)
+- browser fingerprint
+
+--
+Sandboxy
+- retezeni bugu -> FF bug, OS bug
+- spusteni aplikace na cilovem OS
+- soutez
+- pokousi se prolomit behem hodiny
+- bezpecnostni zaplaty FF do jednoho dne
+- black market, trh s exploity
+
